@@ -1,5 +1,6 @@
 package service;
 
+import AddAsignmentMV.validation.TemaValidator;
 import curent.Curent;
 import domain.Nota;
 import domain.Student;
@@ -23,13 +24,13 @@ import static java.time.temporal.ChronoUnit.DAYS;
  */
 public class Service {
     //private StudentFileRepository studentFileRepository;
-    private StudentXMLRepo studentFileRepository;
+    private repository.StudentXMLRepo studentFileRepository;
     private StudentValidator studentValidator;
     //private TemaFileRepository temaFileRepository;
-    private TemaXMLRepo temaFileRepository;
+    private repository.TemaXMLRepo temaFileRepository;
     private TemaValidator temaValidator;
     //private NotaFileRepository notaFileRepository;
-    private NotaXMLRepo notaFileRepository;
+    private repository.NotaXMLRepo notaFileRepository;
     private NotaValidator notaValidator;
 
     /**
@@ -42,7 +43,7 @@ public class Service {
      * @param notaValidator - validator nota
      */
     //public Service(StudentFileRepository studentFileRepository, StudentValidator studentValidator, TemaFileRepository temaFileRepository, TemaValidator temaValidator, NotaFileRepository notaFileRepository, NotaValidator notaValidator) {
-    public Service(StudentXMLRepo studentFileRepository, StudentValidator studentValidator, TemaXMLRepo temaFileRepository, TemaValidator temaValidator, NotaXMLRepo notaFileRepository, NotaValidator notaValidator) {
+    public Service(repository.StudentXMLRepo studentFileRepository, StudentValidator studentValidator, repository.TemaXMLRepo temaFileRepository, TemaValidator temaValidator, repository.NotaXMLRepo notaFileRepository, NotaValidator notaValidator) {
 
         this.studentFileRepository = studentFileRepository;
         this.studentValidator = studentValidator;
